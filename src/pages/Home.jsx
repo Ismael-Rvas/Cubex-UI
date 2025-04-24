@@ -8,12 +8,13 @@ export function Home() {
       <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
         {/* Background con ::before para diseño animado o estático */}
         <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-        <div className="glow-effect"></div>
+          <div className="glow-effect"></div>
           {/* Texto principal */}
           <div className="max-w-xl text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white">
-              The Future of UI with <span className="text-orange-500">SOLARIUM UI</span>
+              The Future of UI with <span className="text-orange-500 relative">SOLARIUM UI  <span className="absolute left-full top-1 text-orange-500 text-4xl font-light animate-blink">|</span></span>
             </h1>
+
             <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
               Solarium UI is a modern, <strong className="text-orange-500">open-source</strong> component library for React.
               Designed to accelerate your development and deliver elegant, reusable interfaces and components.

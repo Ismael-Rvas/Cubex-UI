@@ -19,6 +19,7 @@ body::-webkit-scrollbar-thumb {
   
 }
 
+/* Glow effect for the background */
 .glow-effect {
   position: absolute;
   top: 8%;
@@ -30,5 +31,17 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+/* Animation for blinking */
+.animate-blink {
+  animation: blink 2s infinite;
+  font-weight: 300; 
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  100% { opacity: 0; } 
+}
+
 
 
