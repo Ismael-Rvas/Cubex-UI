@@ -21,10 +21,10 @@ body::-webkit-scrollbar-thumb {
 
 .glow-effect {
   position: absolute;
-  top: 55%;
-  left: 40%;
-  width: 40%;
-  height: 30%;
+  top: 8%;
+  left: 35%;
+  width: 30%;
+  height: 10%;
   background: radial-gradient(circle, rgba(255, 140, 0, 0.15) 10%, transparent 70%);
   filter: blur(90px);
   transform: translate(-50%, -50%);

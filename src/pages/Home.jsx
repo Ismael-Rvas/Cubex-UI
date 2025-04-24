@@ -3,7 +3,7 @@ import Navbar from "../layout/Navbar";
 export function Home() {
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-black pt-36 md:pt-60">
       <Navbar />
       <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
         {/* Background con ::before para diseño animado o estático */}
@@ -46,6 +46,14 @@ export function Home() {
             </div>
           </div>
         </div>
+
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
+        <div className="mt-96 text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis rerum perspiciatis saepe repudiandae? Laborum consectetur tempore minus dolores cupiditate dolorem nobis provident officiis, obcaecati animi rem optio ipsa eaque?</div>
       </main>
 
     </div>
