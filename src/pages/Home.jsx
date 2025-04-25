@@ -1,5 +1,5 @@
 import CopyCommand from "../components/animations/CopyCommand";
-import Navbar from "../layout/navbar.jsx";
+import Navbar from "../layout/Navbar.jsx";
 export function Home() {
 
   return (
