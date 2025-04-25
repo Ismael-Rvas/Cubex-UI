@@ -1,5 +1,5 @@
 import CopyCommand from "../components/animations/CopyCommand";
-import Navbar from "../layout/Navbar";
+import Navbar from "../layout/navbar.jsx";
 export function Home() {
 
   return (
@@ -12,7 +12,9 @@ export function Home() {
           {/* Texto principal */}
           <div className="max-w-xl text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white">
-              The Future of UI with <span className="text-orange-500 relative">SOLARIUM UI  <span className="absolute left-full top-1 text-orange-500 text-4xl font-light animate-blink">|</span></span>
+              The Future of UI with <span className="text-orange-500 relative">SOLARIUM UI  
+                <span className="absolute left-full bottom-1.5 sm:top-1 text-orange-500 text-2xl sm:text-4xl font-light animate-blink">|</span>
+              </span>
             </h1>
 
             <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">

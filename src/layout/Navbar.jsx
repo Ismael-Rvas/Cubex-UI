@@ -28,11 +28,18 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    document.body.classList.toggle("overflow-hidden", !menuOpen); 
+  };
 
   if (!mounted) return null;
 
   return (
+    <>
+    {menuOpen && (
+        <div className="fixed z-30 top-[64px] left-0 right-0 bottom-0 bg-white/40 dark:bg-black/40 backdrop-blur-xl transition-all duration-300"></div>
+      )}
     <nav
       className={`p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-white dark:bg-black/70 backdrop-blur-lg shadow-md" : "bg-transparent"
@@ -47,7 +54,7 @@ export default function Navbar() {
               className="h-16"
               alt="Logo"
             />
-            <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Solarium</span>
+            <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">SOLARIUM</span>
           </a>
         </div>
 
@@ -85,6 +92,32 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Menú responsive cuando `menuOpen` es true */}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-orange-500 via-red-500 to-orange-600 dark:from-orange-600 dark:via-red-600 dark:to-orange-700 p-6 flex flex-col items-start gap-6 transition-all duration-300">
+          <button onClick={toggleMenu} className="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 transition">
+            <X />
+          </button>
+
+          <div className="flex items-center">
+            <img
+              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745231513/solariumLogo-removebg-preview_zjdfx8.png"
+              className="h-16"
+              alt="Logo"
+            />
+            <span className="text-2xl font-semibold text-white ml-1">SOLARIUM</span>
+          </div>
+
+          <ul className="flex flex-col gap-4 w-full">
+            <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Home</a></li>
+            <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">PlayGround</a></li>
+            <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Docs</a></li>
+            <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Blog</a></li>
+          </ul>
+        </div>
+      )}
     </nav>
+    </>
   );
 }
