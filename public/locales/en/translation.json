@@ -1,0 +1,12 @@
+{
+    "home": {
+        "subtitle": "The Future of UI with",
+        "paragraph1": "Solarium UI is a modern ",
+        "paragraph2": "component library for React. Designed to accelerate your development and deliver elegant, reusable interfaces and components.",
+        "started": "Get Started"
+
+    },
+    "navbar": {
+        "docs": "Docs"
+    }
+}

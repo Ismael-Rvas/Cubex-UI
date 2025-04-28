@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Github, SunMedium, MoonIcon, Menu, X } from "lucide-react";
+import { Github, SunMedium, MoonIcon, Menu, X, Languages  } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { i18n, t } = useTranslation();
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -31,6 +34,13 @@ export default function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     document.body.classList.toggle("overflow-hidden", !menuOpen); 
+  };
+
+  const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen); // Alternar menú de idiomas
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLanguageMenuOpen(false);
   };
 
   if (!mounted) return null;
@@ -63,7 +73,7 @@ export default function Navbar() {
           <ul className="hidden md:flex items-center gap-4">
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Home</a></li>
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">PlayGround</a></li>
-            <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Docs</a></li>
+            <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">{t("navbar.docs")}</a></li>
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Blog</a></li>
           </ul>
 
@@ -71,10 +81,36 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => window.open("https://github.com/Ismael-Rvas/Solarium-UI", "_blank")}
-              className="p-2 ml-3 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+              className="p-2 ml-3 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 hidden sm:block"
             >
               <Github className="w-4 h-4" />
             </button>
+            <div className="relative">
+              <button 
+                onClick={toggleLanguageMenu}
+                className="p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
+              >
+                <Languages className="w-4 h-4" />
+              </button>
+
+              {/* Menú de idiomas */}
+              {languageMenuOpen && (
+                <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-2 w-32">
+                  <button 
+                    onClick={() => changeLanguage("en")}
+                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  >
+                    🇬🇧 English
+                  </button>
+                  <button 
+                    onClick={() => changeLanguage("es")}
+                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  >
+                    🇪🇸 Español
+                  </button>
+                </div>
+              )}
+            </div>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"

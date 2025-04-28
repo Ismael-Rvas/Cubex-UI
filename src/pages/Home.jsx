@@ -1,7 +1,9 @@
 import CopyCommand from "../components/animations/CopyCommand";
 import Navbar from "../layout/Navbar.jsx";
-export function Home() {
+import {useAppTranslation } from "../context/TranslationContext.jsx";
 
+export function Home() {
+  const { t } = useAppTranslation();
   return (
     <div className="bg-white dark:bg-black pt-36 md:pt-60">
       <Navbar />
@@ -12,19 +14,18 @@ export function Home() {
           {/* Texto principal */}
           <div className="max-w-xl text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white">
-              The Future of UI with <span className="text-orange-500 relative">SOLARIUM UI  
+            {t("home.subtitle")} <span className="text-orange-500 relative">SOLARIUM UI  
                 <span className="absolute left-full bottom-1.5 sm:top-1 text-orange-500 text-2xl sm:text-4xl font-light animate-blink">|</span>
               </span>
             </h1>
 
             <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
-              Solarium UI is a modern, <strong className="text-orange-500">open-source</strong> component library for React.
-              Designed to accelerate your development and deliver elegant, reusable interfaces and components.
+            {t("home.paragraph1")} <strong className="text-orange-500">open source</strong> {t("home.paragraph2")}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a href="/docs" className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
-                Get Started →
+              {t("home.started")} →
               </a>
               <CopyCommand command="npm i @solarium-ui/react" />
             </div>
