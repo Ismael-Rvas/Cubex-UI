@@ -7,6 +7,7 @@
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+/*Scroll*/
 body::-webkit-scrollbar {
   width: 8px;
   background: rgba(63, 62, 61, 0.123);
@@ -15,6 +16,11 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: rgba(80, 80, 80, 0.767);
   border-radius: 5px;
+}
+
+/*Selecction text*/
+::selection {
+  background: rgba(224, 191, 150, 0.37);
 }
 
 /* Glow effect for the background */
@@ -41,6 +47,26 @@ body::-webkit-scrollbar-thumb {
   100% { opacity: 0; } 
 }
 
+/* Animation for floating */
+@keyframes floating-up {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floating-down {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-floating-up {
+  animation: floating-up 3s ease-in-out infinite;
+}
+
+.animate-floating-down {
+  animation: floating-down 3s ease-in-out infinite;
+}
 
 
 

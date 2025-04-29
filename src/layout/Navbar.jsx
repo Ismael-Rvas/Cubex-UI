@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className="flex items-center flex-row w-auto">
           {/* Enlaces de navegación: visibles en md+ */}
           <ul className="hidden md:flex items-center gap-4">
-            <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Home</a></li>
+            <li><a href="/" className="text-gray-900 dark:text-white hover:underline p-2">Home</a></li>
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">PlayGround</a></li>
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">{t("navbar.docs")}</a></li>
             <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Blog</a></li>
@@ -146,7 +146,7 @@ export default function Navbar() {
           </div>
 
           <ul className="flex flex-col gap-4 w-full">
-            <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Home</a></li>
+            <li><a href="/" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Home</a></li>
             <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">PlayGround</a></li>
             <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Docs</a></li>
             <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Blog</a></li>
