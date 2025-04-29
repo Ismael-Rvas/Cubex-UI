@@ -60,8 +60,8 @@ export default function Navbar() {
         <div>
           <a href="/" className="flex items-center">
             <img
-              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745231513/solariumLogo-removebg-preview_zjdfx8.png"
-              className="h-16"
+              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745835322/logo_zhgqw7.png"
+              className="h-14 mb-4"
               alt="Logo"
             />
             <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">SOLARIUM</span>
@@ -95,16 +95,16 @@ export default function Navbar() {
 
               {/* Menú de idiomas */}
               {languageMenuOpen && (
-                <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-2 w-32">
+                <div className="absolute right-0 mt-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 w-32">
                   <button 
                     onClick={() => changeLanguage("en")}
-                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:rounded-sm hover:bg-gray-200 dark:hover:bg-slate-900"
                   >
                     🇬🇧 English
                   </button>
                   <button 
                     onClick={() => changeLanguage("es")}
-                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    className="block w-full text-left text-gray-800 dark:text-white p-2 hover:rounded-sm hover:bg-gray-200 dark:hover:bg-slate-900"
                   >
                     🇪🇸 Español
                   </button>
@@ -138,8 +138,8 @@ export default function Navbar() {
 
           <div className="flex items-center">
             <img
-              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745231513/solariumLogo-removebg-preview_zjdfx8.png"
-              className="h-16"
+              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745835322/logo_zhgqw7.png"
+              className="h-14 mb-4"
               alt="Logo"
             />
             <span className="text-2xl font-semibold text-white ml-1">SOLARIUM</span>
