@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-48 gap-9" >
         {/* Branding y Licencia (Izquierda) */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-xl font-bold">Cubexus UI</h2>
+          <h2 className="text-xl font-bold">Cubex UI</h2>
           <p className="text-sm mt-2">
             Todos los componentes están publicados bajo la MIT License.
           </p>
@@ -25,7 +25,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-xs mt-4">
-            &copy; 2025 Cubexus UI. Todos los derechos reservados.
+            &copy; 2025 Cubex UI. Todos los derechos reservados.
           </p>
         </div>
 

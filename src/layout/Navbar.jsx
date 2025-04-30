@@ -62,7 +62,7 @@ export default function Navbar() {
                 className="h-10 mr-2"
                 alt="Logo"
               />
-              <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Cubexus</span>
+              <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Cubex</span>
             </a>
           </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => window.open("https://github.com/Ismael-Rvas/Cubexus-UI", "_blank")}
+                onClick={() => window.open("https://github.com/Ismael-Rvas/Cubex-UI", "_blank")}
                 className="p-2 ml-3 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 hidden sm:block"
               >
                 <Github className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function Navbar() {
                 className="h-10 mr-1"
                 alt="Logo"
               />
-              <span className="text-2xl font-semibold text-white ml-1">Cubexus UI</span>
+              <span className="text-2xl font-semibold text-white ml-1">Cubex UI</span>
             </div>
 
             <ul className="flex flex-col gap-4 w-full">

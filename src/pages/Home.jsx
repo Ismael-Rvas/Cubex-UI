@@ -20,7 +20,7 @@ export function Home() {
           <div className="glow-effect"></div>
           <div className="max-w-xl text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white">
-              {t("home.title")} <span className="text-orange-500 relative">CUBEXUS UI
+              {t("home.title")} <span className="text-orange-500 relative">CUBEX UI
                 <span className="absolute left-full bottom-1.5 sm:top-1 text-orange-500 text-2xl sm:text-4xl font-light animate-blink">|</span>
               </span>
             </h1>
@@ -33,7 +33,7 @@ export function Home() {
               <div className="flex items-center justify-center">
                 <Button />
               </div>
-              <CopyCommand command="npm i @cubexus-ui/react" />
+              <CopyCommand command="npm i @cubex-ui/react" />
             </div>
           </div>
 
