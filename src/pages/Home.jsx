@@ -6,8 +6,9 @@ import { NeumorphicInput } from "../components/components/UI/NeumorphicInput.jsx
 import { Tabs } from "../components/components/UI/Tabs.jsx";
 import { ToggleSwitch } from "../components/components/UI/ToggleSwitch.jsx";
 import FeaturesBlock from "../components/components/UI/blocks/FeaturesBlock.jsx";
-import TemplatesSection from "../components/components/UI/blocks/template/TemplatesSection.jsx";
 import Button from "../components/components/UI/Button.jsx";
+import TemplateCard from "../components/components/UI/blocks/TemplateCard.jsx";
+import Footer from "../layout/Footer.jsx";
 
 export function Home() {
   const { t } = useAppTranslation();
@@ -94,12 +95,17 @@ export function Home() {
               {t("home.paragraph4")}
             </p>
 
-            <TemplatesSection />
+            <div className="flex items-center justify-center ">
+              <TemplateCard />
+
+            </div>
 
           </div>
         </section>
-      </main>
 
+          
+      </main>
+      <Footer/>
     </div>
   );
 }

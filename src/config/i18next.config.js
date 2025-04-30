@@ -9,7 +9,7 @@ i18n.use(LanguageDetector) // Detecta automáticamente el idioma del navegador
   .init({
     supportedLngs: ["en", "es"], // Idiomas soportados
     fallbackLng: ["es", "en"], 
-    debug: true,
+    debug: false,
     interpolation: { escapeValue: false },
     backend: {
       loadPath: "/locales/{{lng}}/translation.json" // Carga traducciones según el idioma detectado
