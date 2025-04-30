@@ -1,12 +1,13 @@
 {
     "home": {
         "title": "El Futuro de las UI con",
-        "paragraph1": "Solarium UI es una moderna biblioteca de componentes ",
+        "paragraph1": "Cubexus UI es una moderna biblioteca de componentes ",
         "paragraph2": "para React. Diseñada para acelerar tu desarrollo y ofrecer interfaces y componentes elegantes y reutilizables.",
         "started": "Comenzar",
+        "backStarted": "Explora!",
 
         "title2": "Características",
-        "paragraph3": "SolariumUI, la solución más rapida y sencilla de aplicar en tus proyectos",
+        "paragraph3": "CubexusUI, la solución más rapida y sencilla de aplicar en tus proyectos",
 
         "featuresTitle1": "5+ Componentes de UI",
         "featuresParagraph1": "Componentes faciles de usar y diseñados para ser reutilizables",
@@ -15,7 +16,7 @@
         "featuresTitle3": "Comunidad",
         "featuresParagraph3": "Preparado para conectar con la comunidad, proyecto open source.",
         "featuresTitle4": "Documentación",
-        "featuresParagraph4": "Documentación completa y ejemplos de uso para que puedas empezar a usar Solarium UI rápidamente.",
+        "featuresParagraph4": "Documentación completa y ejemplos de uso para que puedas empezar a usar Cubexus UI rápidamente.",
         "featuresTitle5": "Soporte",
         "featuresParagraph5": "Soporte rapido y comunidad activa para resolver tus dudas y compartir nuevas contribuciones.",
         "featuresTitle6": "Rendimiento",

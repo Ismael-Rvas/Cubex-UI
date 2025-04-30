@@ -1,80 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useAppTranslation } from '../../../context/TranslationContext';
 
 const Button = () => {
-    const { t } = useAppTranslation();
+  const { t } = useAppTranslation();
   return (
-    <StyledWrapper>
+    <div>
       <Link to="/blog">
-      <button className="cssbuttons-io-button">
-      {t("home.started")}
-        <div className="icon">
-          <svg height={24} width={24} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor" />
-          </svg>
-        </div>
-      </button>
+        <button className="overflow-hidden relative w-32 p-2 h-12 bg-orange-500 text-white border-none rounded-md text-xl font-bold cursor-pointer z-10 group">
+          {t("home.started")}
+
+          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left" />
+          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left" />
+          <span className="absolute w-36 h-32 -top-8 -left-2 bg-orange-600 rotate-12 transform scale-x-0 group-hover:scale-x-50 transition-transform group-hover:duration-1000 duration-500 origin-left" />
+
+          <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">
+            {t("home.backStarted")}
+          </span>
+          
+        </button>
       </Link>
-    </StyledWrapper>
+    </div>
   );
 }
-
-const StyledWrapper = styled.div`
-  .cssbuttons-io-button {
-    background: #d4944add;
-    color: white;
-    font-family: inherit;
-    padding: 0.35em;
-    padding-left: 1.2em;
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 0.9em;
-    border: none;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #ffa500;
-    overflow: hidden;
-    position: relative;
-    height: 2.8em;
-    padding-right: 3.3em;
-    cursor: pointer;
-  }
-
-  .cssbuttons-io-button .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #ffa500;
-    right: 0.3em;
-    transition: all 0.3s;
-  }
-
-  .cssbuttons-io-button:hover .icon {
-    width: calc(100% - 0.6em);
-  }
-
-  .cssbuttons-io-button .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: #ffa500;
-  }
-
-  .cssbuttons-io-button:hover .icon svg {
-    transform: translateX(0.1em);
-  }
-
-  .cssbuttons-io-button:active .icon {
-    transform: scale(0.95);
-  }`;
 
 export default Button;

@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Cambia el estado si el usuario hace scroll más de 50px
+      setScrolled(window.scrollY > 50); 
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +36,7 @@ export default function Navbar() {
     document.body.classList.toggle("overflow-hidden", !menuOpen); 
   };
 
-  const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen); // Alternar menú de idiomas
+  const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen); 
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -60,11 +60,11 @@ export default function Navbar() {
         <div>
           <a href="/" className="flex items-center">
             <img
-              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745835322/logo_zhgqw7.png"
-              className="h-14 mb-4"
+              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
+              className="h-10 mr-2"
               alt="Logo"
             />
-            <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">SOLARIUM</span>
+            <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Cubexus</span>
           </a>
         </div>
 
@@ -80,7 +80,7 @@ export default function Navbar() {
           {/* Botones GitHub + Theme + Menú hamburguesa */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => window.open("https://github.com/Ismael-Rvas/Solarium-UI", "_blank")}
+              onClick={() => window.open("https://github.com/Ismael-Rvas/Cubexus-UI", "_blank")}
               className="p-2 ml-3 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 hidden sm:block"
             >
               <Github className="w-4 h-4" />
@@ -138,11 +138,11 @@ export default function Navbar() {
 
           <div className="flex items-center">
             <img
-              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1745835322/logo_zhgqw7.png"
-              className="h-14 mb-4"
+              src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
+              className="h-10 mr-1"
               alt="Logo"
             />
-            <span className="text-2xl font-semibold text-white ml-1">SOLARIUM</span>
+            <span className="text-2xl font-semibold text-white ml-1">Cubexus UI</span>
           </div>
 
           <ul className="flex flex-col gap-4 w-full">
