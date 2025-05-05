@@ -1,11 +1,11 @@
-import CopyCommand from "../components/ui/CopyCommand";
+import CopyCommand from "../components/ui/CopyCommand.jsx";
 import { useAppTranslation } from "../context/TranslationContext.jsx";
 import { GlassCard } from "../components/ui/GlassCard.jsx";
 import { NeumorphicInput } from "../components/ui/NeumorphicInput.jsx";
 import { Tabs } from "../components/ui/tabs.jsx";
 import { ToggleSwitch } from "../components/ui/ToggleSwitch.jsx";
 import FeaturesBlock from "../components/ui/blocks/FeaturesBlock.jsx";
-import Button from "../components/ui/Button.jsx";
+import Button from "../components/ui/button.jsx";
 import TemplateCard from "../components/ui/blocks/TemplateCard.jsx";
 
 export function Home() {
