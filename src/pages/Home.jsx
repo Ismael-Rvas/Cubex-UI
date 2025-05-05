@@ -2,7 +2,7 @@ import CopyCommand from "../components/ui/CopyCommand";
 import { useAppTranslation } from "../context/TranslationContext.jsx";
 import { GlassCard } from "../components/ui/GlassCard.jsx";
 import { NeumorphicInput } from "../components/ui/NeumorphicInput.jsx";
-import { Tabs } from "../components/ui/Tabs.jsx";
+import { Tabs } from "../components/ui/tabs.jsx";
 import { ToggleSwitch } from "../components/ui/ToggleSwitch.jsx";
 import FeaturesBlock from "../components/ui/blocks/FeaturesBlock.jsx";
 import Button from "../components/ui/Button.jsx";
