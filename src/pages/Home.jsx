@@ -1,21 +1,17 @@
-import CopyCommand from "../components/animations/CopyCommand";
-import Navbar from "../layout/Navbar.jsx";
+import CopyCommand from "../components/ui/CopyCommand";
 import { useAppTranslation } from "../context/TranslationContext.jsx";
-import { GlassCard } from "../components/components/UI/GlassCard.jsx";
-import { NeumorphicInput } from "../components/components/UI/NeumorphicInput.jsx";
-import { Tabs } from "../components/components/UI/Tabs.jsx";
-import { ToggleSwitch } from "../components/components/UI/ToggleSwitch.jsx";
-import FeaturesBlock from "../components/components/UI/blocks/FeaturesBlock.jsx";
-import Button from "../components/components/UI/Button.jsx";
-import TemplateCard from "../components/components/UI/blocks/TemplateCard.jsx";
-import Footer from "../layout/Footer.jsx";
+import { GlassCard } from "../components/ui/GlassCard.jsx";
+import { NeumorphicInput } from "../components/ui/NeumorphicInput.jsx";
+import { Tabs } from "../components/ui/Tabs.jsx";
+import { ToggleSwitch } from "../components/ui/ToggleSwitch.jsx";
+import FeaturesBlock from "../components/ui/blocks/FeaturesBlock.jsx";
+import Button from "../components/ui/Button.jsx";
+import TemplateCard from "../components/ui/blocks/TemplateCard.jsx";
 
 export function Home() {
   const { t } = useAppTranslation();
   return (
-    <div className="bg-white dark:bg-black pt-36 md:pt-60">
-      <Navbar />
-      <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
+    <div>
         <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="glow-effect"></div>
           <div className="max-w-xl text-center md:text-left">
@@ -102,10 +98,6 @@ export function Home() {
 
           </div>
         </section>
-
-          
-      </main>
-      <Footer/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
-import { ThemeProvider } from "../../../../context/ThemeContext";
+import { ThemeProvider } from "../../../context/ThemeContext";
 
 const LazyLoader = ({ children }) => {
     const [loading, setLoading] = useState(true);

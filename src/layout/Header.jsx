@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Github, SunMedium, MoonIcon, Menu, X, Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+
 export default function Navbar() {
   const { i18n, t } = useTranslation();
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -62,16 +63,16 @@ export default function Navbar() {
                 className="h-10 mr-2"
                 alt="Logo"
               />
-              <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Cubex</span>
+              <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">CubexUI</span>
             </a>
           </div>
 
           <div className="flex items-center flex-row w-auto">
             <ul className="hidden md:flex items-center gap-4">
-              <li><a href="/" className="text-gray-900 dark:text-white hover:underline p-2">Home</a></li>
-              <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">PlayGround</a></li>
-              <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">{t("navbar.docs")}</a></li>
+              <li><a href="/docs" className="text-gray-900 dark:text-white hover:underline p-2">{t("navbar.docs")}</a></li>
+              <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Components</a></li>
               <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">Blog</a></li>
+              <li><a href="#" className="text-gray-900 dark:text-white hover:underline p-2">PlayGround</a></li>
             </ul>
 
             <div className="flex items-center gap-2">
@@ -95,13 +96,19 @@ export default function Navbar() {
                       onClick={() => changeLanguage("en")}
                       className="block w-full text-left text-gray-800 dark:text-white p-2 hover:rounded-sm hover:bg-gray-200 dark:hover:bg-slate-900"
                     >
-                      🇬🇧 English
+                      <div className="flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746435609/reino-unido_rzwuvm.png" alt="Bandera England" className="w-4 h-4 mr-1.5" />
+                        <span className="text-center">English</span>
+                      </div>
                     </button>
                     <button
                       onClick={() => changeLanguage("es")}
                       className="block w-full text-left text-gray-800 dark:text-white p-2 hover:rounded-sm hover:bg-gray-200 dark:hover:bg-slate-900"
                     >
-                      🇪🇸 Español
+                       <div className="flex items-center justify-center">
+                      <img src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746435606/espana_yutwmj.png" alt="Bandera España" className="w-4 h-4 mr-1.5" /> 
+                      <span className="text-center">Español</span>
+                      </div>
                     </button>
                   </div>
                 )}
@@ -138,12 +145,12 @@ export default function Navbar() {
               />
               <span className="text-2xl font-semibold text-white ml-1">Cubex UI</span>
             </div>
-
+            
             <ul className="flex flex-col gap-4 w-full">
-              <li><a href="/" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Home</a></li>
-              <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">PlayGround</a></li>
-              <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Docs</a></li>
+              <li><a href="/docs" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">{t("navbar.docs")}</a></li>
+              <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Components</a></li>
               <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">Blog</a></li>
+              <li><a href="#" className="block w-full text-white border-b border-white/30 pb-2 text-lg hover:text-gray-300 transition">PlayGround</a></li>
             </ul>
           </div>
         )}
