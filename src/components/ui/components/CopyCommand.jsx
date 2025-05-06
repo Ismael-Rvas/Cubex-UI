@@ -8,7 +8,7 @@ export default function CopyCommand({ command }) {
     try {
       await navigator.clipboard.writeText(command);
       setCopied(true);
-      setTimeout(() => setCopied(false), 1800); // Volver al icono de Copy después de 1 segundo
+      setTimeout(() => setCopied(false), 1800); 
     } catch (err) {
       console.error("Error al copiar", err);
     }
@@ -17,7 +17,7 @@ export default function CopyCommand({ command }) {
   return (
     <div
       onClick={handleCopy}
-      className="relative flex items-center px-6 py-3 bg-transparent border border-gray-200 dark:border-gray-700 text-black dark:text-white rounded-lg text-xs font-semibold transition cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
+      className="relative flex items-center justify-center max-w-3xs px-6 py-3 bg-transparent border border-gray-200 dark:border-gray-700 text-black dark:text-white rounded-lg text-sm font-semibold transition cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
     >
       <Terminal className="w-4 h-4 mr-2" />
       {command}

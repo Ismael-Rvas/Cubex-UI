@@ -17,7 +17,7 @@ const LazyLoader = ({ children }) => {
 
     return loading ? (
         <ThemeProvider>
-            <div className={`fixed inset-0 flex items-center justify-center bg-white dark:bg-black transition-opacity duration-500 ease-in-out`}>
+            <div className={`fixed inset-0 flex items-center justify-center bg-white dark:bg-[#070707] transition-opacity duration-500 ease-in-out`}>
                 <Loader />
             </div>
         </ThemeProvider>

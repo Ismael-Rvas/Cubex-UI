@@ -7,7 +7,7 @@ i18n.use(LanguageDetector) // Detecta automáticamente el idioma del navegador
   .use(HttpApi) // Carga traducciones desde archivos JSON externos
   .use(initReactI18next)
   .init({
-    supportedLngs: ["en", "es"], // Idiomas soportados
+    supportedLngs: ["en", "es", "fr", "de"], // Idiomas soportados
     fallbackLng: ["es", "en"], 
     debug: false,
     interpolation: { escapeValue: false },

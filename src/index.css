@@ -2,21 +2,26 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-
   box-sizing: border-box;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*Scroll*/
 body::-webkit-scrollbar {
   width: 8px;
-  background: rgba(63, 62, 61, 0.123);
-  filter: blur(10px);
+  background: rgba(229, 231, 235, 0.5); /* gray-200 with opacity */
 }
 body::-webkit-scrollbar-thumb {
-  background: rgba(80, 80, 80, 0.767);
+  background: rgba(156, 163, 175, 0.7); /* gray-400 with opacity */
   border-radius: 5px;
 }
+html.dark body::-webkit-scrollbar {
+    background: rgba(5, 5, 5, 0.911); /* gray-800 with opacity */
+}
+html.dark body::-webkit-scrollbar-thumb {
+   background: rgba(107, 114, 128, 0.822); /* gray-500 with opacity */
+}
+
 
 /*Selecction text*/
 ::selection {
@@ -46,28 +51,3 @@ body::-webkit-scrollbar-thumb {
   0%, 50% { opacity: 1; }
   100% { opacity: 0; } 
 }
-
-/* Animation for floating */
-@keyframes floating-up {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes floating-down {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-  100% { transform: translateY(0); }
-}
-
-.animate-floating-up {
-  animation: floating-up 3s ease-in-out infinite;
-}
-
-.animate-floating-down {
-  animation: floating-down 3s ease-in-out infinite;
-}
-
-
-
-
