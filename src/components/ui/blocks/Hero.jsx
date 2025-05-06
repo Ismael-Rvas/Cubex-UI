@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import CopyCommand from '../components/CopyCommand';
-import ButtonGetStarted from '../components/buttonGetStarted';
+import ButtonGetStarted from '../components/ButtonGetStarted';
 
 const Hero = () => {
   const { t } = useTranslation();
