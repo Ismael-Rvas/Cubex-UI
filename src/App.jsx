@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import LazyLoader from "./components/ui/loader/LazyLoader";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import ProgressBar from "./components/ui/components/ProgresBar";
 
 function App() {
   //Loader comentado para pruebas
@@ -27,6 +28,7 @@ function App() {
           <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
             <MyRoutes />
           </main>
+          <ProgressBar />
           <Footer />
         </div>
       </TranslationProvider>

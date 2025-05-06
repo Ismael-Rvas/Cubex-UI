@@ -44,7 +44,9 @@ const Navblock = () => {
         <nav className="p-4 transition-all duration-300 backdrop-blur-lg bg-transparent">
             <div className="max-w-screen-xl mx-auto flex items-center justify-between">
                 <div>
-                    <Link to="/" className="flex items-center text-xl font-bold">
+                    <Link to="/" className="flex items-center text-xl font-bold" onClick={() => {
+                                    window.scrollTo(0, 0); 
+                                  }}>
                         <img
                             src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
                             className="h-10 mr-2"
@@ -63,6 +65,9 @@ const Navblock = () => {
                                 className={({ isActive }) =>
                                     cn("text-sm font-medium transition-colors", isActive ? activeClass : inactiveClass)
                                 }
+                                onClick={() => {
+                                    window.scrollTo(0, 0); 
+                                  }}
                             >
                                 {item.label}
                             </NavLink>
@@ -97,7 +102,10 @@ const Navblock = () => {
                         <X />
                     </button>
 
-                    <Link to="/" className="flex items-center" onClick={toggleMenu}>
+                    <Link to="/" className="flex items-center" onClick={() => {
+                        toggleMenu();
+                        window.scrollTo(0, 0); 
+                    }}>
                         <img
                             src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
                             className="h-10 mr-2"
@@ -111,7 +119,10 @@ const Navblock = () => {
                             <NavLink
                                 key={item.path}
                                 to={item.path}
-                                onClick={toggleMenu}
+                                onClick={() => {
+                                    toggleMenu();
+                                    window.scrollTo(0, 0); 
+                                }}
                                 className={({ isActive }) =>
                                     cn("text-xl font-bold transition-colors", isActive ? activeClass : inactiveClass)
                                 }
