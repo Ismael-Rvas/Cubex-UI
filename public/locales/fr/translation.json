@@ -28,7 +28,7 @@
     "development": "Développement Actif",
     "whyCubexTitle": "Pourquoi Choisir CubexUI ?",
     "whyCubexSubtitle": "Concentrez-vous sur votre logique, laissez CubexUI gérer la présentation.",
-    "feature1Title": "Expérience Développeur",
+    "feature1Title": "Expérience",
     "feature1Desc": "API intuitive, excellent support TypeScript et documentation claire.",
     "feature2Title": "Performance",
     "feature2Desc": "Composants optimisés conçus pour la vitesse et une taille de bundle minimale.",

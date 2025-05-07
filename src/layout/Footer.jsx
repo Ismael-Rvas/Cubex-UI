@@ -5,7 +5,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full py-28 px-6 transition-all border-t border-orange-200 dark:border-orange-400 shadow-[0_-5px_15px_rgba(231, 179, 82, 0.705)] text-black dark:text-white">
+    <footer className="w-full py-28 px-6 border-t border-gray-200 dark:border-[#151518] text-black dark:text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-48 gap-9" >
         {/* Branding y Licencia (Izquierda) */}
         <div className="flex flex-col justify-center">

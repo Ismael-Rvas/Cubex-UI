@@ -8,22 +8,21 @@ import Footer from "./layout/Footer";
 import ProgressBar from "./components/ui/components/ProgresBar";
 
 function App() {
-  //Loader comentado para pruebas
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setLoading(false), 2000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  // if (loading) {
-  //   return <LazyLoader />;
-  // }
+  if (loading) {
+    return <LazyLoader />;
+  }
 
   return (
     <ThemeProvider>
       <TranslationProvider>
-        <div className="bg-white dark:bg-[#070707] pt-16 md:pt-20">
+        <div className="bg-white dark:bg-[#09090b] pt-16 md:pt-20">
           <Header />
           <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
             <MyRoutes />
