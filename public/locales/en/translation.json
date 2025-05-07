@@ -15,6 +15,9 @@
     "getStarted": "Get Started",
     "browseComponents": "Explore!"
   },
+  "notFound": {
+    "returnHomePage": "Return to init"
+  },
   "homePage": {
     "trustedTitle": "Trusted by Leading Teams",
     "trustedSubtitle": "Modern development teams choose CubexUI to build scalable and elegant user interfaces.",

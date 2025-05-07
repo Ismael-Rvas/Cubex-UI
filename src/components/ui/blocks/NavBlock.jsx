@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Github, Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 import ButtonChangeTheme from "./ButtonChangeTheme";
 import LanguageSwicht from "../blocks/LanguageSwicht";
 import { cn } from "../../../lib/utils";
@@ -24,20 +25,7 @@ const Navblock = () => {
         { path: '/playground', label: t('navbar.playground') },
     ];
 
-    const activeClass = cn(
-        "tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-red-500 to-orange-400 dark:from-orange-400 dark:via-red-400 dark:to-orange-300",
-        {
-            initial: { backgroundSize: "200% auto" },
-            animate: { backgroundPosition: "200% center" },
-            transition: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "linear",
-                repeatType: "reverse",
-            },
-            style: { WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' },
-        }
-    );
+    const activeClass = "bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-red-500 to-orange-400 dark:from-orange-400 dark:via-red-400 dark:to-orange-300";
     const inactiveClass = "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white";
 
     return (
@@ -45,14 +33,20 @@ const Navblock = () => {
             <div className="max-w-screen-xl mx-auto flex items-center justify-between">
                 <div>
                     <Link to="/" className="flex items-center text-xl font-bold" onClick={() => {
-                                    window.scrollTo(0, 0); 
-                                  }}>
-                        <img
-                            src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
-                            className="h-10 mr-2"
-                            alt="Logo"
-                        />
-                        <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">CubexUI</span>
+                        window.scrollTo(0, 0);
+                    }}>
+                        <motion.div
+                            className="flex items-center"
+                            whileHover={{ scale: 1.08 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        >
+                            <img
+                                src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
+                                className="h-10"
+                                alt="Logo"
+                            />
+                            <span className="text-2xl font-semibold text-gray-900 dark:text-white ml-1">Cubex<span className="mask-linear-from-neutral-800">UI</span></span>
+                        </motion.div>
                     </Link>
                 </div>
 
@@ -66,8 +60,8 @@ const Navblock = () => {
                                     cn("text-sm font-medium transition-colors", isActive ? activeClass : inactiveClass)
                                 }
                                 onClick={() => {
-                                    window.scrollTo(0, 0); 
-                                  }}
+                                    window.scrollTo(0, 0);
+                                }}
                             >
                                 {item.label}
                             </NavLink>
@@ -104,14 +98,14 @@ const Navblock = () => {
 
                     <Link to="/" className="flex items-center" onClick={() => {
                         toggleMenu();
-                        window.scrollTo(0, 0); 
+                        window.scrollTo(0, 0);
                     }}>
                         <img
                             src="https://res.cloudinary.com/ismaelrvas/image/upload/v1746028694/logoCuboDifuminado_jwvegu.png"
-                            className="h-10 mr-2"
+                            className="h-10"
                             alt="Logo"
                         />
-                        <span className="text-2xl font-semibold text-gray-900 dark:text-gray-200 ml-1">CubexUI</span>
+                        <span className="text-2xl font-semibold text-gray-900 dark:text-gray-200 ml-1">Cubex<span className="mask-linear-from-neutral-800">UI</span></span>
                     </Link>
 
                     <div className="flex flex-col gap-4 w-full">
@@ -121,7 +115,7 @@ const Navblock = () => {
                                 to={item.path}
                                 onClick={() => {
                                     toggleMenu();
-                                    window.scrollTo(0, 0); 
+                                    window.scrollTo(0, 0);
                                 }}
                                 className={({ isActive }) =>
                                     cn("text-xl font-bold transition-colors", isActive ? activeClass : inactiveClass)

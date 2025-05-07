@@ -1,12 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ProgressBar = () => {
+    const [showProgress, setShowProgress] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercent = (scrollTop / windowHeight) * 100;
             const progressBar = document.getElementById("progress-bar");
+
+            // Muestra la barra solo cuando el usuario ha comenzado a desplazarse
+            setShowProgress(scrollTop > 0);
+
             if (progressBar) {
                 progressBar.style.strokeDashoffset = 282.6 - (282.6 * scrollPercent) / 100;
             }
@@ -15,8 +21,6 @@ const ProgressBar = () => {
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", handleScroll);
         
-        handleScroll(); 
-        
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", handleScroll);
@@ -24,8 +28,11 @@ const ProgressBar = () => {
     }, []);
 
     return (
-        <a href="#" data-aos="fade-up" data-aos-duration="1200"
-            className="fixed bottom-6 right-6 w-12 h-12 z-50 cursor-pointer hover:scale-110 transition-transform duration-200 bg-transparent rounded-full flex items-center justify-center">
+        <a href="#" 
+            data-aos="fade-up" data-aos-duration="1200" 
+            className={`fixed bottom-6 right-6 w-12 h-12 z-50 cursor-pointer hover:scale-110  bg-transparent rounded-full flex items-center justify-center 
+            transition-opacity duration-500 ease-in-out ${showProgress ? "opacity-100" : "opacity-0"}`}
+        >
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="45" stroke="#a3a3a344" strokeWidth="3" fill="none"></circle>
                 <circle id="progress-bar" cx="50" cy="50" r="45" stroke="#f8a100" strokeWidth="3" fill="none"

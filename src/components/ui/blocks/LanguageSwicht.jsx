@@ -1,11 +1,12 @@
 import { Languages } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 const LanguageSwicht = () => {
     const { i18n, t } = useTranslation();
 
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+    const menuRef = useRef(null);
 
     const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen);
 
@@ -14,8 +15,21 @@ const LanguageSwicht = () => {
         setLanguageMenuOpen(false);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setLanguageMenuOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div className="relative">
+        <div className="relative" ref={menuRef}> 
             <button
                 onClick={toggleLanguageMenu}
                 className="p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
@@ -24,7 +38,7 @@ const LanguageSwicht = () => {
             </button>
 
             {languageMenuOpen && (
-                <div className="absolute right-0 mt-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 w-32">
+                <div className="absolute right-0 mt-2 bg-white dark:bg-slate-700 rounded-lg shadow-lg p-2 w-32">
                     <button
                         onClick={() => changeLanguage("es")}
                         className="block w-full text-left cursor-pointer text-gray-800 dark:text-white p-2 hover:rounded-sm hover:bg-gray-200 dark:hover:bg-slate-900"

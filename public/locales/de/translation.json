@@ -15,6 +15,9 @@
     "getStarted": "Loslegen",
     "browseComponents": "Erkunden!"
   },
+  "notFound": {
+    "returnHomePage": "Zurück"
+  },
   "homePage": {
     "trustedTitle": "Vertraut von Führenden Teams",
     "trustedSubtitle": "Moderne Entwicklungsteams wählen CubexUI, um skalierbare und elegante Benutzeroberflächen zu erstellen.",

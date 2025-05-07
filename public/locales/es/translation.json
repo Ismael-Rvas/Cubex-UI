@@ -15,6 +15,9 @@
     "getStarted": "Empezar",
     "browseComponents": "Explora!"
   },
+  "notFound": {
+    "returnHomePage": "Volver a inicio"
+  },
   "homePage": {
     "trustedTitle": "Con la Confianza de Equipos Líderes",
     "trustedSubtitle": "Equipos de desarrollo modernos eligen CubexUI para construir interfaces de usuario escalables y elegantes.",

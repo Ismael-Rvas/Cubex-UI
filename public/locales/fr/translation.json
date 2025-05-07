@@ -15,6 +15,9 @@
     "getStarted": "Commencer",
     "browseComponents": "Explore!"
   },
+  "notFound": {
+    "returnHomePage": "Retourner"
+  },
   "homePage": {
     "trustedTitle": "Approuvé par les Équipes Leaders",
     "trustedSubtitle": "Les équipes de développement modernes choisissent CubexUI pour construire des interfaces utilisateur évolutives et élégantes.",

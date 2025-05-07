@@ -51,3 +51,10 @@ html.dark body::-webkit-scrollbar-thumb {
   0%, 50% { opacity: 1; }
   100% { opacity: 0; } 
 }
+
+
+@keyframes border-glow {
+  0% { border-color: rgba(255, 153, 51, 0.4); }
+  50% { border-color: rgba(255, 153, 51, 1); }
+  100% { border-color: rgba(255, 153, 51, 0.4); }
+}

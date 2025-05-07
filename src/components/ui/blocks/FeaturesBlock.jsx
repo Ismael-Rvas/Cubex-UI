@@ -1,11 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { Puzzle, Brush, Users, BookOpenText, Smartphone, Package, TrendingUp, Building } from "lucide-react";
+
 const FeatureCard = ({ title, description, icon }) => {
   return (
-    <div className="rounded-xl p-6 bg-white/10 dark:bg-black/20 backdrop-blur-lg shadow-lg border border-orange-400/20 flex flex-col items-start cursor-crosshair hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
-      <div className="text-orange-400 text-2xl mb-3">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-600 dark:text-white">{title}</h3>
-      <p className="text-secondary text-gray-600  dark:text-gray-300 mt-2">{description}</p>
+    <div className="relative rounded-xl p-6 bg-white/10 dark:bg-zinc-950/20 backdrop-blur-lg hover:shadow-md  flex flex-col items-center cursor-crosshair transition-all duration-300 ease-in-out group">
+      <div className="p-3 rounded-full bg-orange-400/10 text-orange-500 mb-3 transition-all duration-300 ease-in-out ">
+        {icon}
+      </div>
+
+      <h3 className="text-lg font-semibold text-gray-700 dark:text-white">{title}</h3>
+
+      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{description}</p>
+
+      <div className="absolute inset-0 rounded-xl border border-gray-300 dark:border-gray-700 group-hover:border-orange-500 transition-all duration-700 ease-in-out animate-border-glow"></div>
     </div>
   );
 };
