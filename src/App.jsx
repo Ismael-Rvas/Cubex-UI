@@ -6,6 +6,7 @@ import LazyLoader from "./components/ui/loader/LazyLoader";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import ProgressBar from "./components/ui/components/ProgresBar";
+import {Toaster} from "./components/ui/toast/toaster";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
           </main>
           <ProgressBar />
           <Footer />
+          <Toaster/>
         </div>
       </TranslationProvider>
     </ThemeProvider>

@@ -14,10 +14,10 @@ const NotFound = () => {
       >
         <button
           type="button"
-          class=" text-center cursor-pointer w-48 rounded-2xl h-14 relative text-zinc-700 dark:text-white text-xl font-semibold border-4 border-transparent bg-transparent group"
+          className=" text-center cursor-pointer w-48 rounded-2xl h-14 relative text-zinc-700 dark:text-white text-xl font-semibold border-4 border-transparent bg-transparent group"
         >
           <div
-            class="bg-[#e69635] rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500"
+            className="bg-[#e69635] rounded-xl h-12 w-1/4 grid place-items-center absolute left-0 top-0 group-hover:w-full z-10 duration-500"
           >
             <svg
               width="25px"
@@ -35,7 +35,7 @@ const NotFound = () => {
               ></path>
             </svg>
           </div>
-          <p class="translate-x-4 ml-3.5"> {t("notFound.returnHomePage")}</p>
+          <p className="translate-x-4 ml-3.5"> {t("notFound.returnHomePage")}</p>
         </button>
       </Link>
       <StyledWrapper>

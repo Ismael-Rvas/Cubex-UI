@@ -22,7 +22,6 @@ html.dark body::-webkit-scrollbar-thumb {
    background: rgba(107, 114, 128, 0.822); /* gray-500 with opacity */
 }
 
-
 /*Selecction text*/
 ::selection {
   background: rgba(224, 191, 150, 0.37);
@@ -40,18 +39,6 @@ html.dark body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
-
-/* Animation for blinking */
-.animate-blink {
-  animation: blink 2s infinite;
-  font-weight: 300; 
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  100% { opacity: 0; } 
-}
-
 
 @keyframes border-glow {
   0% { border-color: rgba(255, 153, 51, 0.4); }

@@ -2,7 +2,7 @@ import FeaturesBlock from "../components/ui/blocks/FeaturesBlock.jsx";
 import Hero from "../components/ui/blocks/Hero.jsx";
 import HomeTemplate from "../components/ui/blocks/HomeTemplates.jsx";
 
-export function Home() {
+const Home = () => {
   return (
     <>
       <Hero />
@@ -11,3 +11,4 @@ export function Home() {
     </>
   );
 }
+export default Home;

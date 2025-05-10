@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-toast": "^1.2.13",
     "@tailwindcss/vite": "^4.1.4",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.2",
     "i18next": "^25.0.1",
