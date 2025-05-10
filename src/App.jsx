@@ -23,9 +23,9 @@ function App() {
   return (
     <ThemeProvider>
       <TranslationProvider>
-        <div className="bg-white dark:bg-[#09090b] pt-16 md:pt-20">
+        <div className="flex flex-col min-h-screen justify-center items-center bg-white dark:bg-[#09090b]">
           <Header />
-          <main className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden px-6 py-4 sm:px-12 ">
+          <main className="flex-grow">
             <MyRoutes />
           </main>
           <ProgressBar />

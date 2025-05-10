@@ -4,11 +4,11 @@ import HomeTemplate from "../components/ui/blocks/HomeTemplates.jsx";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Hero />
       <FeaturesBlock />
       <HomeTemplate />
-    </>
+    </div>
   );
 }
 export default Home;

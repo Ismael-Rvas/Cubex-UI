@@ -6,8 +6,7 @@ const HomeTemplates = () => {
     const { i18n, t } = useTranslation();
 
     return (
-        <section className="relative max-w-7xl w-full gap-12 mt-24 md:mt-52 px-6 justify-center aling-center mb-48">
-
+        <section className="py-16 md:py-24 container">
             <div className="relative flex flex-col  ">
                 <div className="relative mb-6 flex items-center justify-center">
 
@@ -26,7 +25,6 @@ const HomeTemplates = () => {
                     <TemplateCard />
 
                 </div>
-
             </div>
         </section>
     );

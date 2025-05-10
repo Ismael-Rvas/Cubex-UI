@@ -33,18 +33,18 @@ const FeaturesBlock = () => {
   ];
 
   return (
-    <section className="max-w-7xl w-full  gap-12 mt-24 md:mt-24 ">
-      <div>
-        <h2 className="mt-6 text-3xl md:text-4xl font-bold text-black dark:text-white text-center">{t("homePage.whyCubexTitle")}</h2>
-        <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 text-center mb-4 md:mb-8">
+    <section className="py-16 md:py-24 container">
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">{t("homePage.whyCubexTitle")}</h2>
+        <p className="text-lg max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
           {t("homePage.whyCubexSubtitle")}
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-8xl mx-auto p-6">
+      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
         </div>
-      </div>
     </section>
   );
 };
